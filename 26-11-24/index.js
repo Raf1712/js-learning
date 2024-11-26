@@ -1,0 +1,21 @@
+// Given an array [1, 2, 2, 3, 4, 4, 5]:
+// Write a program to create a new array where duplicate elements are removed.
+// The result should be [1, 2, 3, 4, 5].
+
+const arr = [1, 2, 2, 3, 4, 4, 5] ;
+const uniqItems = [];
+
+const obj = {
+    1: true,
+    2: true,
+}
+
+for(let i = 0; i < arr.length; i++){
+    let item = arr[i];
+    if(!obj[item]){
+        obj[item] = true;
+        uniqItems.push(item);
+    }
+
+}
+console.log(uniqItems);
